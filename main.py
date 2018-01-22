@@ -13,7 +13,7 @@ quest = Question(file)
 window = Tk()
 window.title("Quiz")
 window.geometry("520x900")
-window.wm_resizable(0, 0)
+# window.wm_resizable(0, 0)
 
 
 def finish():
@@ -49,18 +49,18 @@ exitButton.place(x=4, y=180)
 
 labelFrame = LabelFrame(window)
 labelFrame.pack(side="left", fill=BOTH)
-canvas = Canvas(labelFrame, relief=SUNKEN)
+canvas = Canvas(labelFrame)
 canvas.configure(scrollregion=(0, 0, 900, 2000))
 
 scrollbar = Scrollbar(labelFrame)
 scrollbar.config(command=canvas.yview)
 canvas.config(yscrollcommand=scrollbar.set)
 scrollbar.pack(side="right", fill=Y)
-canvas.pack(side="left", fill=BOTH)
+canvas.pack(side="left", fill=Y)
 
 frame = Frame(canvas)
 frame.pack(side="top", fill=BOTH)
-canvas.create_window(0, 0, window=frame, anchor="nw")
+canvas.create_window(0, 0, window=frame, anchor="nw", width=800)
 
 answersCollections = []
 
@@ -90,6 +90,7 @@ for i in range(10):
             answerObject = Answer(answer, IntVar())
             checkButton = Checkbutton(question, text=answer, variable=answerObject.getVariable(), bg="#fff")
             checkButton.pack(anchor=W, padx=30)
+            checkButton.configure(wraplength=350, justify=LEFT)
         else:
             if stringVar == None:
                 stringVar = StringVar()
@@ -97,6 +98,7 @@ for i in range(10):
             radioButton = Radiobutton(question, text=answer, variable=answerObject.getVariable(), value=answer,
                                       bg="#fff")
             radioButton.pack(anchor=W, padx=30)
+            radioButton.configure(wraplength=350, justify=LEFT)
 
         answerCollection.add(answerObject)
     question.pack(fill=BOTH, padx=8, pady=10)
