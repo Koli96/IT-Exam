@@ -94,6 +94,7 @@ for i in range(10):
         else:
             if stringVar == None:
                 stringVar = StringVar()
+                stringVar.set("1")
             answerObject = Answer(answer, stringVar)
             radioButton = Radiobutton(question, text=answer, variable=answerObject.getVariable(), value=answer,
                                       bg="#fff")
