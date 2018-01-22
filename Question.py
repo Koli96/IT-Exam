@@ -106,16 +106,28 @@ class Question:
         return self.__question["answers"][int(answerId)]["isTrue"]
 
     def isMultiAnswer(self):
-        trueAnswers = 0
-
+        hasCorrect = False;
         for answer in self.__question["answers"]:
-            if True == answer['isTrue']:
-                trueAnswers +=1
+            if not hasCorrect and answer['isTrue']:
+                hasCorrect = True
+            elif hasCorrect and answer['isTrue']:
+                return True
+        return False
 
-        return trueAnswers > 1
-
+    def isMultiAnswerFor(self,idx):
+        hasCorrect = False;
+        for answer in self.__data["questions"][idx]["answers"]:
+            if not hasCorrect and answer['isTrue']:
+                hasCorrect = True
+            elif hasCorrect and answer['isTrue']:
+                return True
+        return False
+        
     def getAllAvailablePoints(self):
         return self.__points
 
     def getQuestionPoint(self):
         return self.__question['points']
+
+    def getQuestionPointFor(self,idx):
+        return self.__data["questions"][idx]['points']
