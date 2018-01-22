@@ -1,0 +1,56 @@
+{
+	"questions": [
+		{
+			"question": "Czy woda jest mokra?",
+			"points": 3,
+			"answers": [
+				{
+					"text": "Tak 1",
+					"isTrue": true
+				},
+				{
+					"text": "Tak, ale nie 1",
+					"isTrue": true
+				},
+				{
+					"text": "Nie, ale tak 1",
+					"isTrue": false
+				},
+				{
+					"text": "Nie 1",
+					"isTrue": false
+				},
+				{
+					"text": "Yyyy, mleko 1",
+					"isTrue": false
+				}
+			]
+		},
+		{
+		"question": "Jaki dzwiek wydaje krowa?",
+			"points": 2,
+			"answers": [
+				{
+					"text": "Tak 2",
+					"isTrue": true
+				},
+				{
+					"text": "Tak, ale nie 2",
+					"isTrue": false
+				},
+				{
+					"text": "Muuu 2",
+					"isTrue": false
+				},
+				{
+					"text": "Hał hał 2",
+					"isTrue": false
+				},
+				{
+					"text": "Yyyy, mleko 2",
+					"isTrue": false
+				}
+			]
+		}
+	]
+}

@@ -7,6 +7,7 @@ class Question:
         self.__data = json.load(database)
         self.__questions = copy.deepcopy(self.__data)
         self.__question = None
+        self.__points = 0
 
     def drawQuestion(self, fromDb = False):
         if fromDb:
@@ -15,6 +16,7 @@ class Question:
             if len(self.__questions["questions"]) > 0:
                 idx = random.randrange(len(self.__questions["questions"]))
                 self.__question = self.__questions["questions"][idx]
+                self.__points += self.__question['points']
                 del self.__questions["questions"][idx]
             else:
                 raise IndexError("There is no more questions to pick!")
@@ -102,3 +104,18 @@ class Question:
             return False
 
         return self.__question["answers"][int(answerId)]["isTrue"]
+
+    def isMultiAnswer(self):
+        trueAnswers = 0
+
+        for answer in self.__question["answers"]:
+            if True == answer['isTrue']:
+                trueAnswers +=1
+
+        return trueAnswers > 1
+
+    def getAllAvailablePoints(self):
+        return self.__points
+
+    def getQuestionPoint(self):
+        return self.__question['points']
