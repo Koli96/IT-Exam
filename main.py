@@ -8,7 +8,7 @@ quest = Question(open('./db.json'))
 
 window = Tk()
 window.title("Quiz")
-window.geometry("500x800")
+window.geometry("520x900")
 window.wm_resizable(0, 0)
 
 
@@ -40,10 +40,13 @@ exitButton = Button(navbar, text="Wyjdź", width=12, command=window.destroy)
 exitButton.pack()
 exitButton.place(x=4, y=180)
 
-labelFrame = LabelFrame(window, width=100, height=100)
+
+
+
+labelFrame = LabelFrame(window)
 labelFrame.pack(side="left", fill=BOTH)
 canvas = Canvas(labelFrame, relief=SUNKEN)
-canvas.configure(scrollregion=(0, 0, 300, 2000))
+canvas.configure(scrollregion=(0, 0, 900, 2000))
 
 scrollbar = Scrollbar(labelFrame)
 scrollbar.config(command=canvas.yview)
@@ -60,12 +63,13 @@ answersCollections = []
 column = 1
 row = 0
 w = 0
-for i in range(2):
+for i in range(10):
     question = Frame(frame, bg="#fff")
 
     row += 3
     quest.drawQuestion()
     label = Label(question, text=str(i + 1) + ". " + quest.getQuestion(), fg="black", bg="#fff")
+    label.configure(wraplength=350, justify=LEFT)
     label.config(font=("Arial", 12))
     label.pack(anchor=W, pady=5, padx=15)
 
@@ -91,7 +95,7 @@ for i in range(2):
             radioButton.pack(anchor=W, padx=30)
 
         answerCollection.add(answerObject)
-    question.pack(fill=BOTH, padx=70, pady=10)
+    question.pack(fill=BOTH, padx=8, pady=10)
 
 
 def summarize():
@@ -99,5 +103,10 @@ def summarize():
     # print(summarize)
     return summarize
 
+
+
+
+test = Frame(labelFrame, width=15)
+test.pack(fill=Y, side=RIGHT)
 
 window.mainloop()
