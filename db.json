@@ -1,54 +1,230 @@
 {
 	"questions": [
 		{
-			"question": "Czy woda jest mokra?",
-			"points": 3,
+			"question": "Jakie czynności są zwykle kontrolowane przez mostek północny chipsetu? (Wybierz dwie odpowiedzi.)",
+			"points": 2,
 			"answers": [
 				{
-					"text": "Tak 1",
+					"text": "Dostęp do pamięci RAM",
 					"isTrue": true
 				},
 				{
-					"text": "Tak, ale nie 1",
+					"text": "Komunikacja pomiędzy procesorem a kartą dźwiekową",
+					"isTrue": false
+				},
+				{
+					"text": "Komunikacja między procesorem a dyskiem twardym",
+					"isTrue": false
+				},
+				{
+					"text": "Dostęp do karty graficznej",
 					"isTrue": true
 				},
 				{
-					"text": "Nie, ale tak 1",
-					"isTrue": false
-				},
-				{
-					"text": "Nie 1",
-					"isTrue": false
-				},
-				{
-					"text": "Yyyy, mleko 1",
+					"text": "Komunikacja pomiędzy procesorem i portami we/wy",
 					"isTrue": false
 				}
 			]
 		},
 		{
-		"question": "Jaki dzwiek wydaje krowa?",
-			"points": 2,
+			"question": "W którym typie pamięci zawartość nie może być zmieniona?",
+			"points": 1,
 			"answers": [
 				{
-					"text": "Tak 2",
+					"text": "SRAM",
+					"isTrue": false
+				},
+				{
+					"text": "RAM",
+					"isTrue": false
+				},
+				{
+					"text": "ROM",
 					"isTrue": true
 				},
 				{
-					"text": "Tak, ale nie 2",
+					"text": "DRAM",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Jaka jednostka jest używana do opisania prędkości dysku?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Obroty na minutę",
+					"isTrue": true
+				},
+				{
+					"text": "Klastry na minutę",
 					"isTrue": false
 				},
 				{
-					"text": "Muuu 2",
+					"text": "Gigabajty",
 					"isTrue": false
 				},
 				{
-					"text": "Hał hał 2",
+					"text": "Strony na minutę",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Które urządzenia są urządzeniami wejścia? (Wybierz dwie odpowiedzi.)",
+			"points": 2,
+			"answers": [
+				{
+					"text": "Głośniki",
 					"isTrue": false
 				},
 				{
-					"text": "Yyyy, mleko 2",
+					"text": "Czytnik linii papilarnych",
+					"isTrue": true
+				},
+				{
+					"text": "Drukarka",
 					"isTrue": false
+				},
+				{
+					"text": "Kamera internetowa",
+					"isTrue": true
+				},
+				{
+					"text": "Projektor",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Jakiego portu używa protokół HTTP?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "88",
+					"isTrue": false
+				},
+				{
+					"text": "420",
+					"isTrue": false
+				},
+				{
+					"text": "443",
+					"isTrue": false
+				},
+				{
+					"text": "80",
+					"isTrue": true
+				}
+			]
+		},
+		{
+			"question": "Na jakim standardzie oparte jest Wi-Fi?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "IEEE 802.12",
+					"isTrue": false
+				},
+				{
+					"text": "IEEE 802.11",
+					"isTrue": true
+				},
+				{
+					"text": "IE 3.0",
+					"isTrue": false
+				},
+				{
+					"text": "IEEE 802.15.1",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Jaka jest długość adresów IPv6?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "32-bit",
+					"isTrue": false
+				},
+				{
+					"text": "64-bit",
+					"isTrue": false
+				},
+				{
+					"text": "128-bit",
+					"isTrue": true
+				},
+				{
+					"text": "256-bit",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Który z podanych języków programownia jest najstarszy?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Python",
+					"isTrue": false
+				},
+				{
+					"text": "C++",
+					"isTrue": true
+				},
+				{
+					"text": "C#",
+					"isTrue": false
+				},
+				{
+					"text": "Java",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Co nie należy do budowy systemu operacyjnego?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "BIOS",
+					"isTrue": true
+				},
+				{
+					"text": "Jądro systemu",
+					"isTrue": false
+				},
+				{
+					"text": "Powłoka",
+					"isTrue": false
+				},
+				{
+					"text": "System plików",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Czym jest kompilacja?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Przeszukiwaniem dysku twardego",
+					"isTrue": false
+				},
+				{
+					"text": "Tłumaczeniem programu źródłowego do pliku",
+					"isTrue": false
+				},
+				{
+					"text": "Tłumaczeniem programu źródłowego na kod szesnastkowy",
+					"isTrue": false
+				},
+				{
+					"text": "Tłumaczeniem programu źródłowego na kod maszynowy",
+					"isTrue": true
 				}
 			]
 		}
