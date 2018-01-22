@@ -1,10 +1,14 @@
+# -*- coding: utf-8 -*-
+
 from AnswerCollection import *
 from PointManager import *
 from Question import *
 from tkinter import *
 from Answer import *
+import codecs
+file = codecs.open('./db.json', 'r', 'utf-8')
 
-quest = Question(open('./db.json'))
+quest = Question(file)
 
 window = Tk()
 window.title("Quiz")
