@@ -7,20 +7,14 @@ from tkinter import *
 from Answer import *
 import codecs
 
-# file = codecs.open('./db.json', 'r', 'utf-8')
-
-# quest = Question(codecs.open('./db.json', 'r', 'utf-8'))
-
 window = Tk()
 window.title("Quiz")
 window.geometry("520x900")
 
 
-# window.wm_resizable(0, 0)
-
-
 def finish():
-    print(quest.getAllAvailablePoints())
+    for widget in frame.winfo_children():
+        widget.destroy()
     points = Label(navbar, text='Liczba \n punktów:', fg="black", bg="#d3d3d3", width=12)
     points.config(font=("Arial", 12))
     points.pack(anchor=E)
@@ -41,7 +35,7 @@ def buildView():
     global answersCollections
     answersCollections = []
     quest = Question(codecs.open('./db.json', 'r', 'utf-8'))
-    createQuestionsView(column, row, w, answersCollections, window, quest, navbar)
+    createQuestionsView(answersCollections, quest, navbar)
 
 
 
@@ -75,22 +69,16 @@ frame = Frame(canvas)
 frame.pack(side="top", fill=BOTH)
 canvas.create_window(0, 0, window=frame, anchor="nw", width=800)
 
-# answersCollections = []
-
-column = 1
-row = 0
-w = 0
 
 test = Frame(labelFrame, width=15)
 test.pack(fill=Y, side=RIGHT)
 
 
-def createQuestionsView(column, row, w, answersCollections, window, quest, navbar):
+def createQuestionsView(answersCollections, quest, navbar):
     for widget in frame.winfo_children():
         widget.destroy()
 
     for widget in navbar.winfo_children():
-        print(widget)
         if str(widget).find('label') != -1:
             widget.destroy()
 
@@ -98,9 +86,8 @@ def createQuestionsView(column, row, w, answersCollections, window, quest, navba
 
     for i in range(10):
         question = Frame(frame, bg="#fff")
-
-        row += 3
         quest.drawQuestion()
+
         label = Label(question, text=str(i + 1) + ". " + quest.getQuestion(), fg="black", bg="#fff")
         label.configure(wraplength=350, justify=LEFT)
         label.config(font=("Arial", 12))
@@ -109,12 +96,8 @@ def createQuestionsView(column, row, w, answersCollections, window, quest, navba
         answerCollection = AnswerCollection(quest.getCurrentIndex(), quest)
         answersCollections.append(answerCollection)
         stringVar = None
-        row += 3
 
         for answer in quest.getAllAnswersFor(quest.getCurrentIndex()):
-            row += 1
-            w += 1
-
             if True == quest.isMultiAnswer():
                 answerObject = Answer(answer, IntVar())
                 checkButton = Checkbutton(question, text=answer, variable=answerObject.getVariable(), bg="#fff")
@@ -136,7 +119,7 @@ def createQuestionsView(column, row, w, answersCollections, window, quest, navba
 
 def summarize():
     summarize = PointManager.summarize(answersCollections, quest)
-    # print(answersCollections)
+
     return summarize
 
 
