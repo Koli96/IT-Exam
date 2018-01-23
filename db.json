@@ -207,6 +207,194 @@
 			]
 		},
 		{
+			"question": "Które z podanych języków programowania są językami interpretowanymi?",
+			"points": 3,
+			"answers": [
+				{
+					"text": "C#",
+					"isTrue": false
+				},
+				{
+					"text": "Ruby",
+					"isTrue": true
+				},
+				{
+					"text": "Python",
+					"isTrue": true
+				},
+				{
+					"text": "JavaScript",
+					"isTrue": true
+				},
+				{
+					"text": "Java",
+					"isTrue": true
+				}
+			]
+		},
+		{
+			"question": "Jak nazywał się pierwszy komputer?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Pontiac",
+					"isTrue": false
+				},
+				{
+					"text": "Xiaomi",
+					"isTrue": false
+				},
+				{
+					"text": "MacBook Pro",
+					"isTrue": false
+				},
+				{
+					"text": "ENIAC",
+					"isTrue": true
+				}
+			]
+		},
+		{
+			"question": "Kto uważany jest za ojca sztucznej inteligencji?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Bill Gates",
+					"isTrue": false
+				},
+				{
+					"text": "Steve Jobs",
+					"isTrue": false
+				},
+				{
+					"text": "Emmanuel Olisadebe",
+					"isTrue": false
+				},
+				{
+					"text": "Alan Turing",
+					"isTrue": true
+				}
+			]
+		},
+		{
+			"question": "Jaka liczba odpowiada '1010101' w systemie dziesiętnym?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "101",
+					"isTrue": false
+				},
+				{
+					"text": "85",
+					"isTrue": true
+				},
+				{
+					"text": "72",
+					"isTrue": false
+				},
+				{
+					"text": "95",
+					"isTrue": false
+				}
+			]
+		},
+		{
+			"question": "Który system operacyjny jest najpopularniejszy?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Android",
+					"isTrue": true
+				},
+				{
+					"text": "Windows",
+					"isTrue": false
+				},
+				{
+					"text": "Linux",
+					"isTrue": false
+				},
+				{
+					"text": "iOS",
+					"isTrue": false
+				},
+				{
+					"text": "OS X",
+					"isTrue": false
+				}
+			]
+		},	
+		{
+			"question": "W czym wyrażana jest częstotliwość odświeżania monitora?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "W uderzeniach na minutę [BPM]",
+					"isTrue": false
+				},
+				{
+					"text": "W hercach [Hz]",
+					"isTrue": true
+				},
+				{
+					"text": "W Fahrenheitach [F]",
+					"isTrue": false
+				}
+			]
+		},	
+		{
+			"question": "Jak nazywał się pierwszy język programowania wysokiego poziomu?",
+			"points": 1,
+			"answers": [
+				{
+					"text": "Python",
+					"isTrue": false
+				},
+				{
+					"text": "C",
+					"isTrue": false
+				},
+				{
+					"text": "BASIC",
+					"isTrue": false
+				},
+				{
+					"text": "FORTRAN",
+					"isTrue": true
+				},
+				{
+					"text": "COBOL",
+					"isTrue": false
+				}
+			]
+		},	
+		{
+			"question": "Które z podanych adresów IPv4 są prywatne?",
+			"points": 3,
+			"answers": [
+				{
+					"text": "10.12.120.1",
+					"isTrue": true
+				},
+				{
+					"text": "192.68.34.12",
+					"isTrue": false
+				},
+				{
+					"text": "192.0.0.0",
+					"isTrue": false
+				},
+				{
+					"text": "172.16.3.0",
+					"isTrue": true
+				},
+				{
+					"text": "192.168.255.0",
+					"isTrue": true
+				}
+			]
+		},	
+		{
 			"question": "Czym jest kompilacja?",
 			"points": 1,
 			"answers": [
